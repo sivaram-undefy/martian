@@ -22,7 +22,7 @@ $max-text-len: 120px;
 }
 
 .nft-name {
-  font-family: 'Work Sans';
+  font-family: 'Inter';
   font-weight: 600;
   width: $max-text-len;
   @include ellipsis();
