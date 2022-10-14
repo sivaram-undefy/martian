@@ -37,13 +37,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martian/martian.git"
+    "url": "git+https://github.com/sivaram-undefy/martian.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/martian/martian/issues"
+    "url": "https://github.com/sivaram-undefy/martian/issues"
   },
-  "homepage": "https://github.com/martian/martian#readme",
+  "homepage": "https://github.com/sivaram-undefy/martian#readme",
   "lint-staged": {
     "*": "prettier --write --ignore-unknown",
     "*.{jsx?,tsx?}": "eslint --fix"
