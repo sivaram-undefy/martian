@@ -68,7 +68,7 @@ export default function Empty(props: EmptyProps) {
         You will see your NFT here once you have one.
         <br />
         <a
-          href="https://martian.app/docs/getting-started"
+          href="https://suiet.app/docs/getting-started"
           className="text-sky-600 underline"
           target="_blank"
           rel="noreferrer"
