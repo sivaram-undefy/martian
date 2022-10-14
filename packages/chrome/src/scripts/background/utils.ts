@@ -41,8 +41,8 @@ export function processPortMessage(input: unknown): CallFuncData {
     }
     return {
       id: params.id,
-      service: service,
-      func: func,
+      service,
+      func,
       payload: params.payload,
     };
   }

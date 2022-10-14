@@ -15,7 +15,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps> {
 
   componentDidCatch(error: Error, info: any) {
     // Display fallback UI
-    this.setState({ error: error });
+    this.setState({ error });
     // You can also log the error to an error reporting service
     console.error('---ErrorBoundary catch:', error, info);
     this.props.onError?.(error, info);

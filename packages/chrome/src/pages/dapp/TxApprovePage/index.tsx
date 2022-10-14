@@ -27,7 +27,7 @@ import Address from '../../../components/Address';
 
 interface MetadataGroup {
   name: string;
-  children: { id: string; module: string }[];
+  children: Array<{ id: string; module: string }>;
 }
 const TX_CONTEXT_TYPE = '0x2::tx_context::TxContext';
 
@@ -142,9 +142,9 @@ const TxApprovePage = () => {
           alt: txReqData?.origin ?? 'origin',
         })}
         <HyperLink url={txReqData?.origin ?? ''} className={'mt-[16px]'} />
-        {/*<Typo.Title className={classnames(styles['header__title'], 'mt-[4px]')}>*/}
-        {/*  Magic Eden*/}
-        {/*</Typo.Title>*/}
+        {/* <Typo.Title className={classnames(styles['header__title'], 'mt-[4px]')}> */}
+        {/*  Magic Eden */}
+        {/* </Typo.Title> */}
         <Typo.Normal className={styles['header__desc']}>
           wants to make a transaction from
         </Typo.Normal>

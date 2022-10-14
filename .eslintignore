@@ -4,3 +4,5 @@
 *.config.ts
 *.d.ts
 *.test.ts
+
+dapp-api.js

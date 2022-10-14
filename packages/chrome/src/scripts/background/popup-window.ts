@@ -25,7 +25,7 @@ export class PopupWindow {
       width: 360,
       height: 595,
       type: 'popup',
-      top: top,
+      top,
       left: Math.floor(left + width - 450),
     });
     this.id = typeof w.id === 'undefined' ? null : w.id;

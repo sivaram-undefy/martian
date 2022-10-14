@@ -152,7 +152,6 @@ function MainPage({ address, networkId }: DashboardProps) {
                 setAirdropLoading(true);
                 fetch('https://faucet.suiet.app/devnet/gas', options)
                   .then(async (response) => await response.json())
-
                   .then((response) => {
                     if (response.error) {
                       message.error(response.error);
