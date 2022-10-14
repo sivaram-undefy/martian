@@ -1,3 +1,7 @@
+<a href="/"><p align="center">
+<img width="480" src="./assets/martian.png?raw=trueg"/>
+</a>
+
 # Martian, the wallet designed for everyone
 
 > **Warning**
