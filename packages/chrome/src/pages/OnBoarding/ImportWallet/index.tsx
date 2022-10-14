@@ -21,7 +21,7 @@ import {
   CreateWalletParams,
   UpdatePasswordParams,
   Wallet,
-} from '@suiet/core';
+} from '@suito/core';
 import { sleep } from '../../../utils/time';
 
 const ImportWallet = () => {

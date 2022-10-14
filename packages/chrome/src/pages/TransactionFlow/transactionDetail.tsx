@@ -8,7 +8,7 @@ import Address from '../../components/Address';
 import copy from 'copy-to-clipboard';
 import message from '../../components/message';
 import CopyIcon from '../../components/CopyIcon';
-import { TxObject, CoinObject, NftObject } from '@suiet/core/src/storage/types';
+import { TxObject, CoinObject, NftObject } from '@suito/core/src/storage/types';
 import { ReactComponent as IconExternal } from '../../assets/icons/external.svg';
 
 export interface TxnItem {

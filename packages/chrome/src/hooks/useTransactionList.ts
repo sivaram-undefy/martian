@@ -1,4 +1,4 @@
-import { GetTxHistoryParams, Network, TxnHistoryEntry } from '@suiet/core';
+import { GetTxHistoryParams, Network, TxnHistoryEntry } from '@suito/core';
 import useSWR from 'swr';
 import { useApiClient } from './useApiClient';
 import { swrLoading } from '../utils/others';

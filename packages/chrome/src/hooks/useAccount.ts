@@ -1,4 +1,4 @@
-import { Account } from '@suiet/core';
+import { Account } from '@suito/core';
 import useSWR from 'swr';
 import { swrLoading } from '../utils/others';
 import { useApiClient } from './useApiClient';

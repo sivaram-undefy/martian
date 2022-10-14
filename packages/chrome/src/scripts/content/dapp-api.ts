@@ -19,7 +19,7 @@ enum Permission {
   SUGGEST_TX = 'suggestTransactions',
 }
 
-export interface ISuietWallet {
+export interface ISuitoWallet {
   connect: (perms: Permission[]) => Promise<ResData>;
   disconnect: () => Promise<ResData>;
   getAccounts: () => Promise<ResData<SuiAddress[]>>;
@@ -33,19 +33,19 @@ export interface ISuietWallet {
   requestPermissions: () => Promise<ResData>;
 }
 
-export class DAppInterface implements ISuietWallet {
+export class DAppInterface implements ISuitoWallet {
   name: string;
   connected: boolean;
   connecting: boolean;
   windowMsgStream: WindowMsgStream;
 
   constructor() {
-    this.name = 'Suiet';
+    this.name = 'Suito';
     this.connected = false;
     this.connecting = false;
     this.windowMsgStream = new WindowMsgStream(
       WindowMsgTarget.DAPP,
-      WindowMsgTarget.SUIET_CONTENT
+      WindowMsgTarget.SUITO_CONTENT
     );
   }
 
@@ -91,8 +91,8 @@ export class DAppInterface implements ISuietWallet {
   }
 }
 
-// mount __suiet__ object on DApp's window environment
-Object.defineProperty(window, '__suiet__', {
+// mount __suito__ object on DApp's window environment
+Object.defineProperty(window, '__suito__', {
   enumerable: false,
   configurable: false,
   value: new DAppInterface(),

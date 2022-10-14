@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import './transactionItem.scss';
 import Address from '../../components/Address';
-import { CoinObject, TxObject } from '@suiet/core/src/storage/types';
+import { CoinObject, TxObject } from '@suito/core/src/storage/types';
 import { nftImgUrl } from '../../utils/nft';
 
 interface TransactionItemProps {

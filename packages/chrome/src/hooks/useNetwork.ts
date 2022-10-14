@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import { useApiClient } from './useApiClient';
-import { Network } from '@suiet/core';
+import { Network } from '@suito/core';
 
 export function useNetwork(networkId: string) {
   const apiClient = useApiClient();

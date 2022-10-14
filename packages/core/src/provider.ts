@@ -246,8 +246,8 @@ export const MINT_EXAMPLE_NFT_MOVE_CALL = {
   function: 'mint',
   typeArguments: [],
   arguments: [
-    'Suiet NFT',
-    'An NFT created by Suiet',
+    'Suito NFT',
+    'An NFT created by Suito',
     'https://xc6fbqjny4wfkgukliockypoutzhcqwjmlw2gigombpp2ynufaxa.arweave.net/uLxQwS3HLFUailocJWHupPJxQsli7aMgzmBe_WG0KC4',
   ],
   gasBudget: 10000,

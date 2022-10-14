@@ -1,6 +1,6 @@
-var ce = Object.defineProperty;
-var ae = (e, t, r) => t in e ? ce(e, t, { enumerable: !0, configurable: !0, writable: !0, value: r }) : e[t] = r;
-var b = (e, t, r) => (ae(e, typeof t != "symbol" ? t + "" : t, r), r);
+const ce = Object.defineProperty;
+const ae = (e, t, r) => t in e ? ce(e, t, { enumerable: !0, configurable: !0, writable: !0, value: r }) : e[t] = r;
+const b = (e, t, r) => (ae(e, typeof t !== "symbol" ? t + "" : t, r), r);
 let _;
 const se = new Uint8Array(16);
 function le() {
@@ -14,7 +14,7 @@ for (let e = 0; e < 256; ++e)
 function fe(e, t = 0) {
   return (y[e[t + 0]] + y[e[t + 1]] + y[e[t + 2]] + y[e[t + 3]] + "-" + y[e[t + 4]] + y[e[t + 5]] + "-" + y[e[t + 6]] + y[e[t + 7]] + "-" + y[e[t + 8]] + y[e[t + 9]] + "-" + y[e[t + 10]] + y[e[t + 11]] + y[e[t + 12]] + y[e[t + 13]] + y[e[t + 14]] + y[e[t + 15]]).toLowerCase();
 }
-const de = typeof crypto < "u" && crypto.randomUUID && crypto.randomUUID.bind(crypto), J = {
+const de = typeof crypto < "u" && crypto.randomUUID && crypto.randomUUID.bind(crypto); const J = {
   randomUUID: de
 };
 function he(e, t, r) {
@@ -30,7 +30,7 @@ function he(e, t, r) {
   }
   return fe(n);
 }
-var k = /* @__PURE__ */ ((e) => (e.DAPP = "DAPP", e.SUIET_CONTENT = "SUIET_CONTENT", e))(k || {});
+var k = /* @__PURE__ */ ((e) => (e.DAPP = "DAPP", e.SUITO_CONTENT = "SUITO_CONTENT", e))(k || {});
 function g(e, t) {
   return {
     id: he(),
@@ -42,12 +42,12 @@ var D = function(e, t) {
   return D = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(r, n) {
     r.__proto__ = n;
   } || function(r, n) {
-    for (var o in n)
+    for (const o in n)
       Object.prototype.hasOwnProperty.call(n, o) && (r[o] = n[o]);
   }, D(e, t);
 };
 function q(e, t) {
-  if (typeof t != "function" && t !== null)
+  if (typeof t !== "function" && t !== null)
     throw new TypeError("Class extends value " + String(t) + " is not a constructor or null");
   D(e, t);
   function r() {
@@ -83,12 +83,12 @@ function ye(e, t, r, n) {
   });
 }
 function z(e, t) {
-  var r = { label: 0, sent: function() {
+  let r = { label: 0, sent: function() {
     if (i[0] & 1)
       throw i[1];
     return i[1];
-  }, trys: [], ops: [] }, n, o, i, u;
-  return u = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol == "function" && (u[Symbol.iterator] = function() {
+  }, trys: [], ops: [] }; let n; let o; let i; let u;
+  return u = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol === "function" && (u[Symbol.iterator] = function() {
     return this;
   }), u;
   function a(c) {
@@ -148,10 +148,10 @@ function z(e, t) {
   }
 }
 function A(e) {
-  var t = typeof Symbol == "function" && Symbol.iterator, r = t && e[t], n = 0;
+  const t = typeof Symbol === "function" && Symbol.iterator; const r = t && e[t]; let n = 0;
   if (r)
     return r.call(e);
-  if (e && typeof e.length == "number")
+  if (e && typeof e.length === "number")
     return {
       next: function() {
         return e && n >= e.length && (e = void 0), { value: e && e[n++], done: !e };
@@ -160,10 +160,10 @@ function A(e) {
   throw new TypeError(t ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 function E(e, t) {
-  var r = typeof Symbol == "function" && e[Symbol.iterator];
+  let r = typeof Symbol === "function" && e[Symbol.iterator];
   if (!r)
     return e;
-  var n = r.call(e), o, i = [], u;
+  const n = r.call(e); let o; const i = []; let u;
   try {
     for (; (t === void 0 || t-- > 0) && !(o = n.next()).done; )
       i.push(o.value);
@@ -191,7 +191,7 @@ function S(e) {
 function pe(e, t, r) {
   if (!Symbol.asyncIterator)
     throw new TypeError("Symbol.asyncIterator is not defined.");
-  var n = r.apply(e, t || []), o, i = [];
+  const n = r.apply(e, t || []); let o; const i = [];
   return o = {}, u("next"), u("throw"), u("return"), o[Symbol.asyncIterator] = function() {
     return this;
   }, o;
@@ -225,8 +225,8 @@ function pe(e, t, r) {
 function ve(e) {
   if (!Symbol.asyncIterator)
     throw new TypeError("Symbol.asyncIterator is not defined.");
-  var t = e[Symbol.asyncIterator], r;
-  return t ? t.call(e) : (e = typeof A == "function" ? A(e) : e[Symbol.iterator](), r = {}, n("next"), n("throw"), n("return"), r[Symbol.asyncIterator] = function() {
+  const t = e[Symbol.asyncIterator]; let r;
+  return t ? t.call(e) : (e = typeof A === "function" ? A(e) : e[Symbol.iterator](), r = {}, n("next"), n("throw"), n("return"), r[Symbol.asyncIterator] = function() {
     return this;
   }, r);
   function n(i) {
@@ -243,15 +243,15 @@ function ve(e) {
   }
 }
 function d(e) {
-  return typeof e == "function";
+  return typeof e === "function";
 }
 function N(e) {
-  var t = function(n) {
+  const t = function(n) {
     Error.call(n), n.stack = new Error().stack;
-  }, r = e(t);
+  }; const r = e(t);
   return r.prototype = Object.create(Error.prototype), r.prototype.constructor = r, r;
 }
-var U = N(function(e) {
+const U = N(function(e) {
   return function(r) {
     e(this), this.message = r ? r.length + ` errors occurred during unsubscription:
 ` + r.map(function(n, o) {
@@ -262,24 +262,24 @@ var U = N(function(e) {
 });
 function Q(e, t) {
   if (e) {
-    var r = e.indexOf(t);
-    0 <= r && e.splice(r, 1);
+    const r = e.indexOf(t);
+    r >= 0 && e.splice(r, 1);
   }
 }
-var F = function() {
+const F = function() {
   function e(t) {
     this.initialTeardown = t, this.closed = !1, this._parentage = null, this._finalizers = null;
   }
   return e.prototype.unsubscribe = function() {
-    var t, r, n, o, i;
+    let t, r, n, o, i;
     if (!this.closed) {
       this.closed = !0;
-      var u = this._parentage;
+      const u = this._parentage;
       if (u)
         if (this._parentage = null, Array.isArray(u))
           try {
             for (var a = A(u), s = a.next(); !s.done; s = a.next()) {
-              var c = s.value;
+              const c = s.value;
               c.remove(this);
             }
           } catch (h) {
@@ -294,19 +294,19 @@ var F = function() {
           }
         else
           u.remove(this);
-      var l = this.initialTeardown;
+      const l = this.initialTeardown;
       if (d(l))
         try {
           l();
         } catch (h) {
           i = h instanceof U ? h.errors : [h];
         }
-      var v = this._finalizers;
+      const v = this._finalizers;
       if (v) {
         this._finalizers = null;
         try {
           for (var f = A(v), p = f.next(); !p.done; p = f.next()) {
-            var m = p.value;
+            const m = p.value;
             try {
               W(m);
             } catch (h) {
@@ -328,7 +328,7 @@ var F = function() {
         throw new U(i);
     }
   }, e.prototype.add = function(t) {
-    var r;
+    let r;
     if (t && t !== this)
       if (this.closed)
         W(t);
@@ -341,19 +341,19 @@ var F = function() {
         (this._finalizers = (r = this._finalizers) !== null && r !== void 0 ? r : []).push(t);
       }
   }, e.prototype._hasParent = function(t) {
-    var r = this._parentage;
+    const r = this._parentage;
     return r === t || Array.isArray(r) && r.includes(t);
   }, e.prototype._addParent = function(t) {
-    var r = this._parentage;
+    const r = this._parentage;
     this._parentage = Array.isArray(r) ? (r.push(t), r) : r ? [r, t] : t;
   }, e.prototype._removeParent = function(t) {
-    var r = this._parentage;
+    const r = this._parentage;
     r === t ? this._parentage = null : Array.isArray(r) && Q(r, t);
   }, e.prototype.remove = function(t) {
-    var r = this._finalizers;
+    const r = this._finalizers;
     r && Q(r, t), t instanceof e && t._removeParent(this);
   }, e.EMPTY = function() {
-    var t = new e();
+    const t = new e();
     return t.closed = !0, t;
   }(), e;
 }();
@@ -364,21 +364,21 @@ function ee(e) {
 function W(e) {
   d(e) ? e() : e.unsubscribe();
 }
-var te = {
+const te = {
   onUnhandledError: null,
   onStoppedNotification: null,
   Promise: void 0,
   useDeprecatedSynchronousErrorHandling: !1,
   useDeprecatedNextContext: !1
-}, R = {
+}; var R = {
   setTimeout: function(e, t) {
     for (var r = [], n = 2; n < arguments.length; n++)
       r[n - 2] = arguments[n];
-    var o = R.delegate;
+    const o = R.delegate;
     return o != null && o.setTimeout ? o.setTimeout.apply(o, I([e, t], E(r))) : setTimeout.apply(void 0, I([e, t], E(r)));
   },
   clearTimeout: function(e) {
-    var t = R.delegate;
+    const t = R.delegate;
     return ((t == null ? void 0 : t.clearTimeout) || clearTimeout)(e);
   },
   delegate: void 0
@@ -393,10 +393,10 @@ function B() {
 function me(e) {
   e();
 }
-var Y = function(e) {
+const Y = function(e) {
   q(t, e);
   function t(r) {
-    var n = e.call(this) || this;
+    const n = e.call(this) || this;
     return n.isStopped = !1, r ? (n.destination = r, ee(r) && r.add(n)) : n.destination = Se, n;
   }
   return t.create = function(r, n, o) {
@@ -424,16 +424,16 @@ var Y = function(e) {
       this.unsubscribe();
     }
   }, t;
-}(F), be = Function.prototype.bind;
+}(F); const be = Function.prototype.bind;
 function C(e, t) {
   return be.call(e, t);
 }
-var we = function() {
+const we = function() {
   function e(t) {
     this.partialObserver = t;
   }
   return e.prototype.next = function(t) {
-    var r = this.partialObserver;
+    const r = this.partialObserver;
     if (r.next)
       try {
         r.next(t);
@@ -441,7 +441,7 @@ var we = function() {
         O(n);
       }
   }, e.prototype.error = function(t) {
-    var r = this.partialObserver;
+    const r = this.partialObserver;
     if (r.error)
       try {
         r.error(t);
@@ -451,7 +451,7 @@ var we = function() {
     else
       O(t);
   }, e.prototype.complete = function() {
-    var t = this.partialObserver;
+    const t = this.partialObserver;
     if (t.complete)
       try {
         t.complete();
@@ -459,10 +459,10 @@ var we = function() {
         O(r);
       }
   }, e;
-}(), V = function(e) {
+}(); var V = function(e) {
   q(t, e);
   function t(r, n, o) {
-    var i = e.call(this) || this, u;
+    const i = e.call(this) || this; let u;
     if (d(r) || !r)
       u = {
         next: r != null ? r : void 0,
@@ -470,7 +470,7 @@ var we = function() {
         complete: o != null ? o : void 0
       };
     else {
-      var a;
+      let a;
       i && te.useDeprecatedNextContext ? (a = Object.create(r), a.unsubscribe = function() {
         return i.unsubscribe();
       }, u = {
@@ -494,8 +494,8 @@ var Se = {
   next: B,
   error: ge,
   complete: B
-}, G = function() {
-  return typeof Symbol == "function" && Symbol.observable || "@@observable";
+}; const G = function() {
+  return typeof Symbol === "function" && Symbol.observable || "@@observable";
 }();
 function Ee(e) {
   return e;
@@ -507,17 +507,17 @@ function xe(e) {
     }, r);
   };
 }
-var w = function() {
+const w = function() {
   function e(t) {
     t && (this._subscribe = t);
   }
   return e.prototype.lift = function(t) {
-    var r = new e();
+    const r = new e();
     return r.source = this, r.operator = t, r;
   }, e.prototype.subscribe = function(t, r, n) {
-    var o = this, i = Ie(t) ? t : new V(t, r, n);
+    const o = this; const i = Ie(t) ? t : new V(t, r, n);
     return me(function() {
-      var u = o, a = u.operator, s = u.source;
+      const u = o; const a = u.operator; const s = u.source;
       i.add(a ? a.call(i, s) : s ? o._subscribe(i) : o._trySubscribe(i));
     }), i;
   }, e.prototype._trySubscribe = function(t) {
@@ -527,7 +527,7 @@ var w = function() {
       t.error(r);
     }
   }, e.prototype.forEach = function(t, r) {
-    var n = this;
+    const n = this;
     return r = K(r), new r(function(o, i) {
       var u = new V({
         next: function(a) {
@@ -543,7 +543,7 @@ var w = function() {
       n.subscribe(u);
     });
   }, e.prototype._subscribe = function(t) {
-    var r;
+    let r;
     return (r = this.source) === null || r === void 0 ? void 0 : r.subscribe(t);
   }, e.prototype[G] = function() {
     return this;
@@ -552,9 +552,9 @@ var w = function() {
       t[r] = arguments[r];
     return xe(t)(this);
   }, e.prototype.toPromise = function(t) {
-    var r = this;
+    const r = this;
     return t = K(t), new t(function(n, o) {
-      var i;
+      let i;
       r.subscribe(function(u) {
         return i = u;
       }, function(u) {
@@ -568,7 +568,7 @@ var w = function() {
   }, e;
 }();
 function K(e) {
-  var t;
+  let t;
   return (t = e != null ? e : te.Promise) !== null && t !== void 0 ? t : Promise;
 }
 function Ae(e) {
@@ -599,7 +599,7 @@ function P(e, t, r, n, o) {
 var Te = function(e) {
   q(t, e);
   function t(r, n, o, i, u, a) {
-    var s = e.call(this, r) || this;
+    const s = e.call(this, r) || this;
     return s.onFinalize = u, s.shouldUnsubscribe = a, s._next = n ? function(c) {
       try {
         n(c);
@@ -625,16 +625,16 @@ var Te = function(e) {
     } : e.prototype._complete, s;
   }
   return t.prototype.unsubscribe = function() {
-    var r;
+    let r;
     if (!this.shouldUnsubscribe || this.shouldUnsubscribe()) {
-      var n = this.closed;
+      const n = this.closed;
       e.prototype.unsubscribe.call(this), !n && ((r = this.onFinalize) === null || r === void 0 || r.call(this));
     }
   }, t;
-}(Y), _e = new w(function(e) {
+}(Y); const _e = new w(function(e) {
   return e.complete();
-}), ne = function(e) {
-  return e && typeof e.length == "number" && typeof e != "function";
+}); const ne = function(e) {
+  return e && typeof e.length === "number" && typeof e !== "function";
 };
 function Oe(e) {
   return d(e == null ? void 0 : e.then);
@@ -646,18 +646,18 @@ function Me(e) {
   return Symbol.asyncIterator && d(e == null ? void 0 : e[Symbol.asyncIterator]);
 }
 function Ue(e) {
-  return new TypeError("You provided " + (e !== null && typeof e == "object" ? "an invalid object" : "'" + e + "'") + " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.");
+  return new TypeError("You provided " + (e !== null && typeof e === "object" ? "an invalid object" : "'" + e + "'") + " where a stream was expected. You can provide an Observable, Promise, ReadableStream, Array, AsyncIterable, or Iterable.");
 }
 function Ce() {
-  return typeof Symbol != "function" || !Symbol.iterator ? "@@iterator" : Symbol.iterator;
+  return typeof Symbol !== "function" || !Symbol.iterator ? "@@iterator" : Symbol.iterator;
 }
-var ke = Ce();
+const ke = Ce();
 function De(e) {
   return d(e == null ? void 0 : e[ke]);
 }
 function Re(e) {
   return pe(this, arguments, function() {
-    var r, n, o, i;
+    let r, n, o, i;
     return z(this, function(u) {
       switch (u.label) {
         case 0:
@@ -710,7 +710,7 @@ function H(e) {
 }
 function je(e) {
   return new w(function(t) {
-    var r = e[G]();
+    const r = e[G]();
     if (d(r.subscribe))
       return r.subscribe(t);
     throw new TypeError("Provided object does not correctly implement Symbol.observable");
@@ -718,7 +718,7 @@ function je(e) {
 }
 function qe(e) {
   return new w(function(t) {
-    for (var r = 0; r < e.length && !t.closed; r++)
+    for (let r = 0; r < e.length && !t.closed; r++)
       t.next(e[r]);
     t.complete();
   });
@@ -734,10 +734,10 @@ function Fe(e) {
 }
 function Ye(e) {
   return new w(function(t) {
-    var r, n;
+    let r, n;
     try {
       for (var o = A(e), i = o.next(); !i.done; i = o.next()) {
-        var u = i.value;
+        const u = i.value;
         if (t.next(u), t.closed)
           return;
       }
@@ -765,9 +765,9 @@ function Ge(e) {
   return ie(Re(e));
 }
 function He(e, t) {
-  var r, n, o, i;
+  let r, n, o, i;
   return ye(this, void 0, void 0, function() {
-    var u, a;
+    let u, a;
     return z(this, function(s) {
       switch (s.label) {
         case 0:
@@ -806,21 +806,21 @@ function He(e, t) {
 }
 function Ze(e, t, r, n, o) {
   n === void 0 && (n = 0), o === void 0 && (o = !1);
-  var i = t.schedule(function() {
+  const i = t.schedule(function() {
     r(), o ? e.add(this.schedule(null, n)) : this.unsubscribe();
   }, n);
   if (e.add(i), !o)
     return i;
 }
-var Je = N(function(e) {
+const Je = N(function(e) {
   return function() {
     e(this), this.name = "EmptyError", this.message = "no elements in sequence";
   };
 });
 function Qe(e, t) {
-  var r = typeof t == "object";
+  const r = typeof t === "object";
   return new Promise(function(n, o) {
-    var i = !1, u;
+    let i = !1; let u;
     e.subscribe({
       next: function(a) {
         u = a, i = !0;
@@ -834,13 +834,13 @@ function Qe(e, t) {
 }
 function L(e, t) {
   return M(function(r, n) {
-    var o = 0;
+    let o = 0;
     r.subscribe(P(n, function(i) {
       n.next(e.call(t, i, o++));
     }));
   });
 }
-var We = Array.isArray;
+const We = Array.isArray;
 function Be(e, t) {
   return We(t) ? e.apply(void 0, I([], E(t))) : e(t);
 }
@@ -850,13 +850,13 @@ function Ke(e) {
   });
 }
 function Xe(e, t, r, n, o, i, u, a) {
-  var s = [], c = 0, l = 0, v = !1, f = function() {
+  const s = []; let c = 0; let l = 0; let v = !1; const f = function() {
     v && !s.length && !c && t.complete();
-  }, p = function(h) {
+  }; const p = function(h) {
     return c < n ? m(h) : s.push(h);
-  }, m = function(h) {
+  }; var m = function(h) {
     i && t.next(h), c++;
-    var Z = !1;
+    let Z = !1;
     H(r(h, l++)).subscribe(P(t, function(x) {
       o == null || o(x), i ? p(x) : t.next(x);
     }, function() {
@@ -865,8 +865,8 @@ function Xe(e, t, r, n, o, i, u, a) {
       if (Z)
         try {
           c--;
-          for (var x = function() {
-            var T = s.shift();
+          for (let x = function() {
+            const T = s.shift();
             u ? Ze(t, u, function() {
               return m(T);
             }) : m(T);
@@ -889,19 +889,19 @@ function oe(e, t, r) {
     return L(function(i, u) {
       return t(n, i, o, u);
     })(H(e(n, o)));
-  }, r) : (typeof t == "number" && (r = t), M(function(n, o) {
+  }, r) : (typeof t === "number" && (r = t), M(function(n, o) {
     return Xe(n, o, e, r);
   }));
 }
-var $e = ["addListener", "removeListener"], ze = ["addEventListener", "removeEventListener"], Ne = ["on", "off"];
+const $e = ["addListener", "removeListener"]; const ze = ["addEventListener", "removeEventListener"]; const Ne = ["on", "off"];
 function j(e, t, r, n) {
   if (d(r) && (n = r, r = void 0), n)
     return j(e, t, r).pipe(Ke(n));
-  var o = E(rt(e) ? ze.map(function(a) {
+  const o = E(rt(e) ? ze.map(function(a) {
     return function(s) {
       return e[a](t, s, r);
     };
-  }) : et(e) ? $e.map(X(e, t)) : tt(e) ? Ne.map(X(e, t)) : [], 2), i = o[0], u = o[1];
+  }) : et(e) ? $e.map(X(e, t)) : tt(e) ? Ne.map(X(e, t)) : [], 2); const i = o[0]; const u = o[1];
   if (!i && ne(e))
     return oe(function(a) {
       return j(a, t, r);
@@ -909,10 +909,10 @@ function j(e, t, r, n) {
   if (!i)
     throw new TypeError("Invalid event target");
   return new w(function(a) {
-    var s = function() {
+    const s = function() {
       for (var c = [], l = 0; l < arguments.length; l++)
         c[l] = arguments[l];
-      return a.next(1 < c.length ? c : c[0]);
+      return a.next(c.length > 1 ? c : c[0]);
     };
     return i(s), function() {
       return u(s);
@@ -937,7 +937,7 @@ function rt(e) {
 }
 function $(e, t) {
   return M(function(r, n) {
-    var o = 0;
+    let o = 0;
     r.subscribe(P(n, function(i) {
       return e.call(t, i, o++) && n.next(i);
     }));
@@ -947,7 +947,7 @@ function nt(e) {
   return e <= 0 ? function() {
     return _e;
   } : M(function(t, r) {
-    var n = 0;
+    let n = 0;
     t.subscribe(P(r, function(o) {
       ++n <= e && (r.next(o), e <= n && r.complete());
     }));
@@ -968,13 +968,14 @@ class it {
     ).pipe(
       $(
         (n) => {
-          var o;
+          let o;
           return n.source === window && ((o = n.data) == null ? void 0 : o.target) === this.source;
         }
       ),
       L((n) => n.data)
     );
   }
+
   async post(t) {
     const r = {
       target: this.target,
@@ -988,6 +989,7 @@ class it {
       )
     );
   }
+
   subscribe(t) {
     this.msgObservable.subscribe(t);
   }
@@ -999,25 +1001,30 @@ class ot {
     b(this, "connected");
     b(this, "connecting");
     b(this, "windowMsgStream");
-    this.name = "Suiet", this.connected = !1, this.connecting = !1, this.windowMsgStream = new it(
+    this.name = "Suito", this.connected = !1, this.connecting = !1, this.windowMsgStream = new it(
       k.DAPP,
-      k.SUIET_CONTENT
+      k.SUITO_CONTENT
     );
   }
+
   async connect(t) {
     return await this.windowMsgStream.post(g("handshake", null)), await this.windowMsgStream.post(
       g("dapp.connect", { permissions: t })
     );
   }
+
   async disconnect() {
     return await this.windowMsgStream.post(g("handwave", null));
   }
+
   async hasPermissions(t) {
     return !0;
   }
+
   async requestPermissions() {
     return await this.windowMsgStream.post(g("requestPermissions", null));
   }
+
   async executeMoveCall(t) {
     return await this.windowMsgStream.post(
       g("dapp.requestTransaction", {
@@ -1026,16 +1033,18 @@ class ot {
       })
     );
   }
+
   async executeSerializedMoveCall(t) {
     return await Promise.reject(new Error("function not implemented yet"));
   }
+
   async getAccounts() {
     return await this.windowMsgStream.post(
       g("dapp.getAccounts", null)
     );
   }
 }
-Object.defineProperty(window, "__suiet__", {
+Object.defineProperty(window, "__suito__", {
   enumerable: !1,
   configurable: !1,
   value: new ot()

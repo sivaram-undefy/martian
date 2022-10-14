@@ -9,7 +9,7 @@ import { Extendable } from '../../../types';
 import classnames from 'classnames';
 import { useMemo } from 'react';
 import { isNonEmptyArray } from '../../../utils/check';
-import { Wallet } from '@suiet/core';
+import { Wallet } from '@suito/core';
 
 export type WalletSelectorProps = Extendable & {};
 
@@ -32,12 +32,12 @@ const WalletSelector = (props: WalletSelectorProps) => {
           hideCopy={true}
           className={styles['wallet-item__address']}
         />
-        {/*<Icon*/}
-        {/*  icon={<IconArrowRight />}*/}
-        {/*  className={styles['wallet-item__arrow']}*/}
-        {/*></Icon>*/}
+        {/* <Icon */}
+        {/*  icon={<IconArrowRight />} */}
+        {/*  className={styles['wallet-item__arrow']} */}
+        {/* ></Icon> */}
       </div>
-      {/*<WalletSwitcher wallets={[]} onSelect={} onEdit={} />*/}
+      {/* <WalletSwitcher wallets={[]} onSelect={} onEdit={} /> */}
     </div>
   );
 };

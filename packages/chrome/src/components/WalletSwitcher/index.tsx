@@ -95,7 +95,7 @@ const WalletSwitcher = (props: WalletSwitcherProps) => {
           )}
         >
           <header className={styles['header']}>
-            <Typo.Title className={styles['header-title']}>Suiet</Typo.Title>
+            <Typo.Title className={styles['header-title']}>Suito</Typo.Title>
             <Typo.Small
               className={classnames(styles['header-desc'], 'mt-[2px]')}
             >

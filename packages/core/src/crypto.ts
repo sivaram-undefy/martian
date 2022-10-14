@@ -14,7 +14,7 @@ import { wordlist as spWordlist } from '@scure/bip39/wordlists/spanish';
 import { wordlist as tzhWordlist } from '@scure/bip39/wordlists/traditional-chinese';
 import randomBytes from 'randombytes';
 
-const WALLET_MASTER_SECRET = 'suiet wallet';
+const WALLET_MASTER_SECRET = 'suito wallet';
 const COIN_TYPE_SUI = '784';
 const PBKDF2_NUM_OF_ITERATIONS = 5000;
 const PBKDF2_KEY_LENGTH = 32;

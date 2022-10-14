@@ -6,7 +6,7 @@ import Empty from './Empty';
 import { useAccount } from '../../hooks/useAccount';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
-import { ITransactionApi } from '@suiet/core/dist/api/txn';
+import { ITransactionApi } from '@suito/core/dist/api/txn';
 import dayjs from 'dayjs';
 import { TxnItem } from './transactionDetail';
 import useTransactionList from '../../hooks/useTransactionList';

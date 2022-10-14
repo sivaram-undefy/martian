@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../store';
-import { Wallet } from '@suiet/core';
+import { Wallet } from '@suito/core';
 import { isNonEmptyArray } from '../utils/check';
 import {
   resetAppContext,

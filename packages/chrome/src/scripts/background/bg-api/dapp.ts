@@ -2,7 +2,7 @@ import { filter, firstValueFrom, map, race, Subject, take, tap } from 'rxjs';
 import { ChromeStorage } from '../../../store/storage';
 import { AppContextState } from '../../../store/app-context';
 import { PopupWindow } from '../popup-window';
-import { Account, NetworkApi, Storage, TransactionApi } from '@suiet/core';
+import { Account, NetworkApi, Storage, TransactionApi } from '@suito/core';
 import { isNonEmptyArray } from '../../../utils/check';
 import { Permission, PermissionManager } from '../permission';
 import { MoveCallTransaction, SuiTransactionResponse } from '@mysten/sui.js';

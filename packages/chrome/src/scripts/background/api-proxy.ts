@@ -7,7 +7,7 @@ import {
   getStorage,
   Storage,
   validateToken,
-} from '@suiet/core';
+} from '@suito/core';
 import { fromEventPattern, Observable } from 'rxjs';
 import { PortName, resData } from '../shared';
 import { log, processPortMessage } from './utils';

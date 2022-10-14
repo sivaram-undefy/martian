@@ -24,7 +24,7 @@ import {
 } from '../../../scripts/background/permission';
 import { ApprovalType } from '../../../scripts/background/bg-api/dapp';
 import HyperLink from '../../../components/HyperLink';
-import { Wallet } from '@suiet/core';
+import { Wallet } from '@suito/core';
 
 const tips: Record<string, any> = {
   [Permission.SUGGEST_TX]: 'Share wallet address',

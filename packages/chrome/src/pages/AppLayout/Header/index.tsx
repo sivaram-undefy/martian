@@ -15,7 +15,7 @@ import { Extendable } from '../../../types';
 import Address from '../../../components/Address';
 import Avatar from '../../../components/Avatar';
 import { useWallet } from '../../../hooks/useWallet';
-import { AccountInWallet, Wallet } from '@suiet/core';
+import { AccountInWallet, Wallet } from '@suito/core';
 
 function useWalletAccountMap(wallets: Wallet[]) {
   const [walletAccountMap, setWalletAccountMap] = useState<
