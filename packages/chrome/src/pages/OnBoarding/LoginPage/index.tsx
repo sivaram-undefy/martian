@@ -89,19 +89,19 @@ const LoginPage = () => {
       <Icon elClassName={commonStyles['logo']} icon={<LogoGrey />} />
 
       <Typo.Title
-        className={classnames(welcomeStyles['suito-title'], 'mt-[64px]')}
+        className={classnames(welcomeStyles['martian-title'], 'mt-[64px]')}
       >
         Back to
       </Typo.Title>
       <Typo.Title
         className={classnames(
-          welcomeStyles['suito-title'],
-          welcomeStyles['suito-title--black']
+          welcomeStyles['martian-title'],
+          welcomeStyles['martian-title--black']
         )}
       >
-        Suito
+        Martian
       </Typo.Title>
-      <Typo.Normal className={welcomeStyles['suito-desc']}>
+      <Typo.Normal className={welcomeStyles['martian-desc']}>
         The wallet for everyone.
       </Typo.Normal>
 

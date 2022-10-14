@@ -1,5 +1,5 @@
 {
-  "name": "@suito/monorepo",
+  "name": "@martian/monorepo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,10 +26,10 @@
   "scripts": {
     "start": "run-s build:core dev:chrome",
     "build": "run-s build:core build:chrome",
-    "dev:chrome": "npm run dev -w @suito/chrome-ext",
-    "build:chrome": "npm run build -w @suito/chrome-ext",
-    "dev:core": "npm run dev -w @suito/core",
-    "build:core": "npm run build -w @suito/core",
+    "dev:chrome": "npm run dev -w @martian/chrome-ext",
+    "build:chrome": "npm run build -w @martian/chrome-ext",
+    "dev:core": "npm run dev -w @martian/core",
+    "build:core": "npm run build -w @martian/core",
     "prettier": "prettier --write --ignore-unknown .",
     "lint": "eslint --ext=.js,.js,.tsx,.ts .",
     "lint:fix": "eslint --fix --ext=.js,.js,.tsx,.ts .",
@@ -37,13 +37,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suito/suito.git"
+    "url": "git+https://github.com/martian/martian.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/suito/suito/issues"
+    "url": "https://github.com/martian/martian/issues"
   },
-  "homepage": "https://github.com/suito/suito#readme",
+  "homepage": "https://github.com/martian/martian#readme",
   "lint-staged": {
     "*": "prettier --write --ignore-unknown",
     "*.{jsx?,tsx?}": "eslint --fix"

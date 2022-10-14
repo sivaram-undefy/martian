@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import { useApiClient } from './useApiClient';
-import { Network } from '@suito/core';
+import { Network } from '@martian/core';
 
 export function useNetwork(networkId: string) {
   const apiClient = useApiClient();

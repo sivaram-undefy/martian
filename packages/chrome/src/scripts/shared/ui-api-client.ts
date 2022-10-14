@@ -30,7 +30,7 @@ export class BackgroundApiClient {
 
   constructor() {
     this.port = chrome.runtime.connect({
-      name: PortName.SUITO_UI_BACKGROUND,
+      name: PortName.MARTIAN_UI_BACKGROUND,
     });
     this.portObservable = fromEventPattern(
       (h) => this.port.onMessage.addListener(h),

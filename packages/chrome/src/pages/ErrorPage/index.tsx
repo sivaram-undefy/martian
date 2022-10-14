@@ -19,18 +19,18 @@ const ErrorPage = (props: ErrorPageProps) => {
   return (
     <div className={classnames(styles['main-page'])}>
       <Icon elClassName={styles['logo']} icon={<LogoGrey />} />
-      <Typo.Title className={classnames(styles['suito-title'], 'mt-[64px]')}>
+      <Typo.Title className={classnames(styles['martian-title'], 'mt-[64px]')}>
         Error
       </Typo.Title>
       <Typo.Title
         className={classnames(
-          styles['suito-title'],
-          styles['suito-title--black']
+          styles['martian-title'],
+          styles['martian-title--black']
         )}
       >
-        Suito
+        Martian
       </Typo.Title>
-      <Typo.Normal className={classnames(styles['suito-desc'])}>
+      <Typo.Normal className={classnames(styles['martian-desc'])}>
         Oops, something went wrong.
       </Typo.Normal>
       <div className={'w-full mt-[8px]'}>

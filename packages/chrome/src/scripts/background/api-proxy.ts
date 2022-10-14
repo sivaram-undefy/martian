@@ -7,7 +7,7 @@ import {
   getStorage,
   Storage,
   validateToken,
-} from '@suito/core';
+} from '@martian/core';
 import { fromEventPattern, Observable } from 'rxjs';
 import { PortName, resData } from '../shared';
 import { log, processPortMessage } from './utils';

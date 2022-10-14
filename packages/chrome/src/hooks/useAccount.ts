@@ -1,4 +1,4 @@
-import { Account } from '@suito/core';
+import { Account } from '@martian/core';
 import useSWR from 'swr';
 import { swrLoading } from '../utils/others';
 import { useApiClient } from './useApiClient';

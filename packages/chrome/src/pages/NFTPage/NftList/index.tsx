@@ -5,7 +5,7 @@ import Typo from '../../../components/Typo';
 import { nftImgUrl } from '../../../utils/nft';
 import { useNavigate } from 'react-router-dom';
 import NftImg from '../../../components/NftImg';
-import { NftObjectDto } from '@suito/core';
+import { NftObjectDto } from '@martian/core';
 import Skeleton from 'react-loading-skeleton';
 
 export type NftListProps = StyleExtendable & {

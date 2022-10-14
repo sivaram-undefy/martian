@@ -3,7 +3,7 @@ import { version } from './package-json';
 
 export default defineManifest((env) => ({
   manifest_version: 3,
-  name: 'Suito',
+  name: 'Martian',
   description: 'The wallet for everyone, built on Sui blockchain',
   version,
   version_name: version,

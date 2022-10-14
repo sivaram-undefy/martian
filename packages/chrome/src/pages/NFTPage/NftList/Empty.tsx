@@ -1,6 +1,6 @@
 import Button from '../../../components/Button';
 import message from '../../../components/message';
-import { MintNftParams } from '@suito/core';
+import { MintNftParams } from '@martian/core';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store';
 import { useNetwork } from '../../../hooks/useNetwork';
@@ -68,7 +68,7 @@ export default function Empty(props: EmptyProps) {
         You will see your NFT here once you have one.
         <br />
         <a
-          href="https://suito.app/docs/getting-started"
+          href="https://martian.app/docs/getting-started"
           className="text-sky-600 underline"
           target="_blank"
           rel="noreferrer"

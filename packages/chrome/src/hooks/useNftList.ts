@@ -1,7 +1,7 @@
 import { useApiClient } from './useApiClient';
 import { useNetwork } from './useNetwork';
 import useSWR from 'swr';
-import { GetOwnedObjParams, Network, NftObjectDto } from '@suito/core';
+import { GetOwnedObjParams, Network, NftObjectDto } from '@martian/core';
 import { swrLoading } from '../utils/others';
 
 export function useNftList(address: string, networkId: string = 'devnet') {

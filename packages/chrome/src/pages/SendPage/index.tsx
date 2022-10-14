@@ -20,7 +20,7 @@ import { useNetwork } from '../../hooks/useNetwork';
 import { useAccount } from '../../hooks/useAccount';
 import { useState } from 'react';
 import { useApiClient } from '../../hooks/useApiClient';
-import { TransferCoinParams } from '@suito/core';
+import { TransferCoinParams } from '@martian/core';
 
 interface SendFormValues {
   address: string;

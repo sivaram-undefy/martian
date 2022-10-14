@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export enum PortName {
-  SUITO_UI_BACKGROUND = 'SUITO_UI_BACKGROUND',
-  SUITO_CONTENT_BACKGROUND = 'SUITO_CONTENT_BACKGROUND',
+  MARTIAN_UI_BACKGROUND = 'MARTIAN_UI_BACKGROUND',
+  MARTIAN_CONTENT_BACKGROUND = 'MARTIAN_CONTENT_BACKGROUND',
 }
 
 export interface WindowMsg<T = any> {
@@ -36,7 +36,7 @@ export interface BackgroundResData<T = any> {
 
 export enum WindowMsgTarget {
   DAPP = 'DAPP',
-  SUITO_CONTENT = 'SUITO_CONTENT',
+  MARTIAN_CONTENT = 'MARTIAN_CONTENT',
 }
 
 export function reqData<T = any>(

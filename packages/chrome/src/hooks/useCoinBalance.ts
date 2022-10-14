@@ -1,4 +1,4 @@
-import { Network, GetOwnedObjParams } from '@suito/core';
+import { Network, GetOwnedObjParams } from '@martian/core';
 import { useCallback, useEffect, useState } from 'react';
 import useSWR from 'swr';
 import { swrLoading } from '../utils/others';

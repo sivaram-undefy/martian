@@ -18,7 +18,7 @@ import {
   RevealMnemonicParams,
   UpdatePasswordParams,
   Wallet,
-} from '@suito/core';
+} from '@martian/core';
 import { AppDispatch, RootState } from '../../../store';
 import { PageEntry, usePageEntry } from '../../../hooks/usePageEntry';
 import Nav from '../../../components/Nav';

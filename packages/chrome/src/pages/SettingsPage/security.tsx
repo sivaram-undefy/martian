@@ -10,7 +10,7 @@ import {
   RevealMnemonicParams,
   UpdatePasswordParams,
   Wallet,
-} from '@suito/core';
+} from '@martian/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../store';
 import { useState } from 'react';

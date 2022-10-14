@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import { CoinPackageIdPair } from '@suito/core';
+import { CoinPackageIdPair } from '@martian/core';
 import { swrLoading } from '../utils/others';
 import { useApiClient } from './useApiClient';
 

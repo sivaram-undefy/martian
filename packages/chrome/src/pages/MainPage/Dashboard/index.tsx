@@ -106,7 +106,7 @@ function MainPage({ address, networkId }: DashboardProps) {
               Got it
             </button>{' '}
             <a
-              href="https://suito.app/docs/why-my-tokens-wiped-out-on-devnet"
+              href="https://martian.app/docs/why-my-tokens-wiped-out-on-devnet"
               target="_blank"
               rel="noreferrer"
               className="underline"
@@ -150,7 +150,7 @@ function MainPage({ address, networkId }: DashboardProps) {
                   }),
                 };
                 setAirdropLoading(true);
-                fetch('https://faucet.suito.app/devnet/gas', options)
+                fetch('https://faucet.martian.app/devnet/gas', options)
                   .then(async (response) => await response.json())
 
                   .then((response) => {

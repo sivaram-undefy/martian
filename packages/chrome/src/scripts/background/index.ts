@@ -24,6 +24,6 @@ class ApiBridgeConnection {
     // eslint-disable-next-line no-console
     console.log('Extension installed');
   });
-  ApiBridgeConnection.connectTo(PortName.SUITO_UI_BACKGROUND);
-  ApiBridgeConnection.connectTo(PortName.SUITO_CONTENT_BACKGROUND);
+  ApiBridgeConnection.connectTo(PortName.MARTIAN_UI_BACKGROUND);
+  ApiBridgeConnection.connectTo(PortName.MARTIAN_CONTENT_BACKGROUND);
 })();

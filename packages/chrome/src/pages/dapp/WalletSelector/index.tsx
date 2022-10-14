@@ -9,7 +9,7 @@ import { Extendable } from '../../../types';
 import classnames from 'classnames';
 import { useMemo } from 'react';
 import { isNonEmptyArray } from '../../../utils/check';
-import { Wallet } from '@suito/core';
+import { Wallet } from '@martian/core';
 
 export type WalletSelectorProps = Extendable & {};
 

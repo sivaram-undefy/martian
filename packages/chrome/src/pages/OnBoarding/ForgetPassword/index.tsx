@@ -34,7 +34,7 @@ const ForgetPassword = (props: ForgetPasswordProps) => {
         Forget <br /> Password
       </Typo.Title>
       <Typo.Normal className={commonStyles['step-desc']}>
-        You need to reset the Suito app.
+        You need to reset the Martian app.
       </Typo.Normal>
 
       <section className={'mt-[24px] w-full'}>
@@ -46,10 +46,10 @@ const ForgetPassword = (props: ForgetPasswordProps) => {
         >
           <div>
             <Typo.Normal className={styles['reset-title']}>
-              Reset Suito App
+              Reset Martian App
             </Typo.Normal>
             <Typo.Hints className={'mt-[8px]'}>
-              Suito will clear all the data and you need to re-import wallets.
+              Martian will clear all the data and you need to re-import wallets.
               Input “RESET” to confirm and reset.
             </Typo.Hints>
             <FormControl
@@ -76,7 +76,7 @@ const ForgetPassword = (props: ForgetPasswordProps) => {
             disabled={getButtonDisabledState(form.formState)}
             className={'mt-[28px]'}
           >
-            Reset Suito
+            Reset Martian
           </Button>
         </Form>
       </section>

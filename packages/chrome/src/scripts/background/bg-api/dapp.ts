@@ -2,7 +2,7 @@ import { filter, firstValueFrom, map, race, Subject, take, tap } from 'rxjs';
 import { ChromeStorage } from '../../../store/storage';
 import { AppContextState } from '../../../store/app-context';
 import { PopupWindow } from '../popup-window';
-import { Account, NetworkApi, Storage, TransactionApi } from '@suito/core';
+import { Account, NetworkApi, Storage, TransactionApi } from '@martian/core';
 import { isNonEmptyArray } from '../../../utils/check';
 import { Permission, PermissionManager } from '../permission';
 import { MoveCallTransaction, SuiTransactionResponse } from '@mysten/sui.js';
@@ -292,7 +292,7 @@ export class DappBgApi {
     return await this.permManager.checkPermissions(perms, {
       address: account.address,
       networkId: appContext.networkId,
-      origin: origin,
+      origin,
     });
   }
 

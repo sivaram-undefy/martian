@@ -1,4 +1,4 @@
-import { UpdateWalletParams, Wallet } from '@suito/core';
+import { UpdateWalletParams, Wallet } from '@martian/core';
 import useSWR from 'swr';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';

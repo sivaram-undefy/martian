@@ -8,18 +8,18 @@ const LoadingPage = () => {
   return (
     <div className={classnames(styles['main-page'])}>
       <Icon elClassName={styles['logo']} icon={<LogoGrey />} />
-      <Typo.Title className={classnames(styles['suito-title'], 'mt-[12px]')}>
+      <Typo.Title className={classnames(styles['martian-title'], 'mt-[12px]')}>
         Loading...
       </Typo.Title>
       <Typo.Title
         className={classnames(
-          styles['suito-title'],
-          styles['suito-title--black']
+          styles['martian-title'],
+          styles['martian-title--black']
         )}
       >
-        Suito
+        Martian
       </Typo.Title>
-      <Typo.Normal className={classnames(styles['suito-desc'])}>
+      <Typo.Normal className={classnames(styles['martian-desc'])}>
         The wallet for everyone
       </Typo.Normal>
     </div>

@@ -1,17 +1,17 @@
-# Suito, the wallet designed for everyone
+# Martian, the wallet designed for everyone
 
 > **Warning**
-> Suito is current on devnet, we may make break changes before the mainnet of [Sui](sui.io) goes online.
+> Martian is current on devnet, we may make break changes before the mainnet of [Sui](sui.io) goes online.
 
 ## 🚀 Getting Started
 
 ### ⚙️ Prepare the enviroment
 
 1. Make sure you have [nodejs](https://nodejs.org/en/download/) install with [npm](https://docs.npmjs.com/)
-2. Clone the suito main repo
+2. Clone the martian main repo
 
 ```bash
-git clone git@github.com:sivaram_undefy/suito.git
+git clone git@github.com:sivaram_undefy/martian.git
 ```
 
 3. Install the dependencies

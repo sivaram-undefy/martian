@@ -11,10 +11,10 @@ function injectDappInterface() {
   container.insertBefore(script, container.firstElementChild);
 }
 
-function isMsgFromSuitoContext(event: MessageEvent<any>) {
+function isMsgFromMartianContext(event: MessageEvent<any>) {
   return (
     event.source === window &&
-    event.data?.target === WindowMsgTarget.SUITO_CONTENT
+    event.data?.target === WindowMsgTarget.MARTIAN_CONTENT
   );
 }
 
@@ -35,7 +35,7 @@ function setupMessageProxy(): {
   clearWindowMsgListener: () => void;
 } {
   const port = chrome.runtime.connect({
-    name: PortName.SUITO_CONTENT_BACKGROUND,
+    name: PortName.MARTIAN_CONTENT_BACKGROUND,
   });
 
   // port msg from background - content script proxy -> window msg to dapp
@@ -48,7 +48,7 @@ function setupMessageProxy(): {
 
   // window msg from dapp - content script proxy -> port msg to ext background
   const passMessageToPort = (event: MessageEvent) => {
-    if (isMsgFromSuitoContext(event) && !isIgnoreMsg(event)) {
+    if (isMsgFromMartianContext(event) && !isIgnoreMsg(event)) {
       // console.log('[content] received event.data', event.data);
       const { payload: trueData } = event.data;
       const message = {
@@ -80,7 +80,7 @@ function setupMessageProxy(): {
   injectDappInterface();
 
   const windowMsgStream = new WindowMsgStream(
-    WindowMsgTarget.SUITO_CONTENT,
+    WindowMsgTarget.MARTIAN_CONTENT,
     WindowMsgTarget.DAPP
   );
   let port: chrome.runtime.Port | null = null;
