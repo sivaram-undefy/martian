@@ -1,18 +1,17 @@
 import classnames from 'classnames';
 import styles from './index.module.scss';
 import { Extendable } from '../../../../types';
-import { ReactComponent as PlusPrimary } from '../../../../assets/icons/plus-primary.svg';
-import { ReactComponent as PlusSecondary } from '../../../../assets/icons/plus-secondary.svg';
 import Icon from '../../../../components/Icon';
 
 export type RectButtonProps = Extendable & {
   theme?: 'primary' | 'default';
   to?: string;
+  icon: React.ReactNode;
   onClick?: () => void;
 };
 
 const RectButton = (props: RectButtonProps) => {
-  const { theme = 'default' } = props;
+  const { theme = 'default', icon } = props;
 
   return (
     <button
@@ -20,14 +19,11 @@ const RectButton = (props: RectButtonProps) => {
       className={classnames(
         styles['rect-btn'],
         styles[`rect-btn--${theme}`],
+        'relative',
         props.className
       )}
     >
-      {theme === 'primary' ? (
-        <Icon icon={<PlusPrimary />} />
-      ) : (
-        <Icon icon={<PlusSecondary />} />
-      )}
+      <Icon icon={icon} className={classnames([styles['icon']])} />
       {props.children}
     </button>
   );
