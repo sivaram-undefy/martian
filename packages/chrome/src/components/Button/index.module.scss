@@ -5,10 +5,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
+  padding: 12px;
   gap: 8px;
 
-  width: 100%;
+  width: 100% !important;
   height: 50px;
   background: $white;
   border: 1px solid $gray-300;
@@ -82,7 +82,7 @@
 
   &:hover {
     background: $error-100;
-    border: none;
+    // border: none;
   }
 
   &:active {
