@@ -7,6 +7,7 @@ import FormControl from '../../../components/form/FormControl';
 import { useForm } from 'react-hook-form';
 import { getInputStateByFormState } from '../../../utils/form';
 import { useApiClient } from '../../../hooks/useApiClient';
+import classNames from 'classnames';
 
 type FormData = {
   secret: string;
@@ -39,17 +40,17 @@ const ImportPhrase = (props: ImportPhraseProps) => {
   }
 
   return (
-    <div className={commonStyles['container']}>
-      <Typo.Title className={commonStyles['step-title']}>
-        Input
-        <br />
-        Recovery
-        <br />
-        Phrase
-      </Typo.Title>
-      <Typo.Normal className={commonStyles['step-desc']}>
-        From an existing wallet.
-      </Typo.Normal>
+    <div className={classNames(commonStyles['container'])}>
+      <div>
+        <Typo.Title className={commonStyles['step-title']}>
+          Recover
+          <br />
+          Wallet
+        </Typo.Title>
+        <Typo.Normal className={commonStyles['step-desc']}>
+          Enter your secret key to recover your walelt
+        </Typo.Normal>
+      </div>
 
       <section className={'mt-[24px] w-full'}>
         <Form form={form} onSubmit={handleSubmit}>
@@ -68,9 +69,6 @@ const ImportPhrase = (props: ImportPhraseProps) => {
               placeholder={'paste recovery phrase or private key...'}
             />
           </FormControl>
-          <Typo.Hints className={'mt-[6px]'}>
-            Displayed when you first created your wallet.
-          </Typo.Hints>
 
           <Button type={'submit'} state={'primary'} className={'mt-[24px]'}>
             Confirm and Import

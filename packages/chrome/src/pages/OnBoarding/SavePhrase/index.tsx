@@ -37,16 +37,18 @@ export const PhraseDisplay = (props: PhraseDisplayProps) => {
 const SavePhrase = (props: { phrases: string[]; onNext: () => void }) => {
   return (
     <div className={commonStyles['container']}>
-      <Typo.Title className={commonStyles['step-title']}>
-        Backup
-        <br />
-        Your
-        <br />
-        Wallet
-      </Typo.Title>
-      <Typo.Normal className={commonStyles['step-desc']}>
-        Copy and save your recovery phrase.
-      </Typo.Normal>
+      <div>
+        <Typo.Title className={commonStyles['step-title']}>
+          Backup
+          <br />
+          Your
+          <br />
+          Wallet
+        </Typo.Title>
+        <Typo.Normal className={commonStyles['step-desc']}>
+          Copy and save your recovery phrase.
+        </Typo.Normal>
+      </div>
       <section className={'mt-[24px]'}>
         <PhraseDisplay phrases={props.phrases}></PhraseDisplay>
         <Button

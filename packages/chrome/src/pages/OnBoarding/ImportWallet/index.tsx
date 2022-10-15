@@ -101,7 +101,7 @@ const ImportWallet = () => {
     }
   }
   return (
-    <div>
+    <>
       <Nav
         title={'Import Wallet'}
         onNavBack={() => {
@@ -119,7 +119,7 @@ const ImportWallet = () => {
         }}
       />
       {renderContent()}
-    </div>
+    </>
   );
 };
 

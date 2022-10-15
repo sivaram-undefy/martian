@@ -1,8 +1,9 @@
 @import '../../styles/variables';
 
 .container {
-  @apply flex flex-col items-center;
-  padding: 32px 32px 0;
+  @apply flex flex-col justify-between flex-grow;
+  padding: 22px;
+  min-height: calc(573px - 56px);
 
   .step-title {
     width: 100%;

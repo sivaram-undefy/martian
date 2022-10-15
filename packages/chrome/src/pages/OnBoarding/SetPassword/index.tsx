@@ -35,12 +35,14 @@ const SavePassword = (props: SavePasswordProps) => {
 
   return (
     <div className={commonStyles['container']}>
-      <Typo.Title className={commonStyles['step-title']}>
-        Set <br /> wallet <br /> password
-      </Typo.Title>
-      <Typo.Normal className={commonStyles['step-desc']}>
-        Used to unlock your wallet.
-      </Typo.Normal>
+      <div>
+        <Typo.Title className={commonStyles['step-title']}>
+          Set <br /> wallet <br /> password
+        </Typo.Title>
+        <Typo.Normal className={commonStyles['step-desc']}>
+          Used to unlock your wallet.
+        </Typo.Normal>
+      </div>
 
       <section className={'mt-[24px] w-full'}>
         <Form
@@ -118,7 +120,7 @@ const SavePassword = (props: SavePasswordProps) => {
           <StepButton
             type={'submit'}
             state={'primary'}
-            className={'mt-[28px] w-[160px]'}
+            className={'mt-[28px] w-full'}
           >
             Next Step
           </StepButton>
