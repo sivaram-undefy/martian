@@ -80,7 +80,7 @@ export class QueryProvider {
   }
 
   public async getOwnedObjects(address: string): Promise<SuiObject[]> {
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     const objectInfos = await this.provider.getObjectsOwnedByAddress(address);
     const objectIds = objectInfos.map((obj) => obj.objectId);
     const resps = await this.provider.getObjectBatch(objectIds);
@@ -90,7 +90,7 @@ export class QueryProvider {
   }
 
   public async getOwnedCoins(address: string): Promise<CoinObject[]> {
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     const objects = await this.getOwnedObjects(address);
     const res = objects
       .map((item) => ({
@@ -103,7 +103,7 @@ export class QueryProvider {
   }
 
   public async getOwnedNfts(address: string): Promise<NftObject[]> {
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     const objects = await this.getOwnedObjects(address);
     const res = objects
       .map((item) => ({
@@ -122,7 +122,7 @@ export class QueryProvider {
   public async getTransactionsForAddress(
     address: string
   ): Promise<TxnHistoryEntry[]> {
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     const txs = await this.provider.getTransactionsForAddress(address);
     if (txs.length === 0 || !txs[0]) {
       return [];
@@ -300,7 +300,7 @@ export class TxProvider {
       throw new Error('Insufficient balance');
     }
     const address = vault.getAddress();
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     for (const coin of coinsToMerge) {
       const data = await this.serializer.newMergeCoin(address, {
         primaryCoin: primaryCoin.objectId,
@@ -346,7 +346,7 @@ export class TxProvider {
     vault: Vault
   ) {
     const address = vault.getAddress();
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     const mergedCoin = await this.mergeCoinsForBalance(
       coins,
       BigInt(amount),
@@ -367,7 +367,7 @@ export class TxProvider {
     vault: Vault
   ) {
     const address = vault.getAddress();
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
     const actualAmount = BigInt(amount + DEFAULT_GAS_BUDGET_FOR_TRANSFER_SUI);
     const coin = await this.mergeCoinsForBalance(
       coins,
@@ -409,19 +409,22 @@ export class TxProvider {
 
   public async mintExampleNft(vault: Vault) {
     const address = vault.getAddress();
-    trySyncAccountState(this.provider, address);
+    // trySyncAccountState(this.provider, address);
 
     await this.executeMoveCall(MINT_EXAMPLE_NFT_MOVE_CALL, vault);
   }
 }
-
-async function trySyncAccountState(provider: JsonRpcProvider, address: string) {
-  try {
-    await provider.syncAccountState(address);
-  } catch (err) {
-    console.log('sync account state failed', err);
-  }
-}
+/**
+ * DEPRECATED
+ * https://github.com/MystenLabs/sui/blob/75d8223937b4d6798a252020694a19144e6ebb68/DEVX_ROADMAP.md
+ */
+// async function trySyncAccountState(provider: JsonRpcProvider, address: string) {
+//   try {
+//     await provider.syncAccountState(address);
+//   } catch (err) {
+//     console.log('sync account state failed', err);
+//   }
+// }
 
 async function executeTransaction(provider: JsonRpcProvider, txn: SignedTx) {
   return await provider.executeTransaction(
